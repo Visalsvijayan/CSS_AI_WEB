@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        
+      }
+
+      body {
+        height: 100vh;
+
+        /* Center the form */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: Arial, sans-serif;
+        background-color: #ce2c2c;
+      }
+
+      .login-form {
+        width: 300px;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+
+        /* Arrange items vertically */
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .login-form h2 {
+        text-align: center;
+      }
+
+      .login-form input,
+      .login-form button {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+
+      .login-form button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form class="login-form">
+        <h2>Login</h2>
+
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </body>
+</html>

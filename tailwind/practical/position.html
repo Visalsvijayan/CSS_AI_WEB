@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Position Practical</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="p-10 space-y-14 bg-gray-100">
+
+    <!-- ====================================== -->
+    <!-- 1. Static -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            1. Static Position
+        </h2>
+
+        <div class="static border p-4 bg-blue-200">
+            This div uses <b>static</b> position (default).
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 2. Relative -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            2. Relative Position
+        </h2>
+
+        <div class="relative top-6 left-10 w-48 bg-green-500 text-white p-4">
+            relative top-6 left-10
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 3. Absolute -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            3. Absolute Position
+        </h2>
+
+        <div class="relative h-48 border-2">
+
+            <div class="absolute top-4 right-4 bg-red-500 text-white p-4">
+                absolute
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 4. Fixed -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            4. Fixed Position
+        </h2>
+
+        <div class="fixed bottom-4 right-4 bg-blue-600 text-white px-5 py-3 rounded-lg shadow-lg">
+            Fixed Button
+        </div>
+
+        <p>
+            Scroll the page to see the fixed button remain in place.
+        </p>
+
+        <div class="h-96"></div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 5. Sticky -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            5. Sticky Position
+        </h2>
+
+        <div class="h-96 overflow-y-scroll border">
+
+            <div class="sticky top-0 bg-purple-600 text-white p-4">
+                Sticky Header
+            </div>
+
+            <div class="p-5 space-y-3">
+                <p>Content Line 1</p>
+                <p>Content Line 2</p>
+                <p>Content Line 3</p>
+                <p>Content Line 4</p>
+                <p>Content Line 5</p>
+                <p>Content Line 6</p>
+                <p>Content Line 7</p>
+                <p>Content Line 8</p>
+                <p>Content Line 9</p>
+                <p>Content Line 10</p>
+                <p>Content Line 11</p>
+                <p>Content Line 12</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 6. inset-0 -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            6. inset-0
+        </h2>
+
+        <div class="relative h-48 border">
+
+            <div class="absolute inset-0 bg-blue-500/40 flex items-center justify-center">
+
+                Overlay using inset-0
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 7. z-index -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            7. z-index
+        </h2>
+
+        <div class="relative h-40">
+
+            <div class="absolute left-8 top-6 w-32 h-32 bg-blue-500 z-10 flex items-center justify-center text-white">
+                z-10
+            </div>
+
+            <div class="absolute left-20 top-14 w-32 h-32 bg-red-500 z-20 flex items-center justify-center text-white">
+                z-20
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 8. Combined Example -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            8. Notification Card
+        </h2>
+
+        <div class="relative w-80 border rounded-lg p-6 bg-white">
+
+            <span class="absolute top-2 right-2 bg-red-500 text-white rounded-full px-2">
+                3
+            </span>
+
+            <h3 class="text-xl font-bold mb-3">
+                Messages
+            </h3>
+
+            <p>
+                You have three unread messages.
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

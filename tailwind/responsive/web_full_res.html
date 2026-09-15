@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tailwind Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white p-4 flex justify-between items-center">
+
+        <h1 class="text-xl font-bold">TechLearn</h1>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-6">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu Icon -->
+        <button class="md:hidden text-2xl">
+            ☰
+        </button>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="flex flex-col md:flex-row items-center gap-8 p-8">
+
+        <div class="flex-1 text-center md:text-left">
+
+            <h1 class="text-3xl md:text-5xl font-bold">
+                Learn Tailwind CSS
+            </h1>
+
+            <p class="mt-4 text-gray-600">
+                Build responsive websites quickly using utility classes.
+            </p>
+
+            <button class="bg-blue-600 text-white px-6 py-3 rounded mt-5 hover:bg-blue-700">
+                Get Started
+            </button>
+
+        </div>
+
+        <div class="flex-1">
+            <img
+                src="https://picsum.photos/600/400"
+                class="w-full rounded-lg shadow-lg"
+                alt="Hero Image">
+        </div>
+
+    </section>
+
+    <!-- Features -->
+    <section class="p-8">
+
+        <h2 class="text-3xl font-bold text-center mb-8">
+            Our Features
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-bold mb-2">Responsive</h3>
+                <p>Design websites for every screen size.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-bold mb-2">Fast</h3>
+                <p>Build interfaces without writing custom CSS.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-bold mb-2">Reusable</h3>
+                <p>Utility classes make development simple.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4 mt-8">
+        © 2026 TechLearn. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

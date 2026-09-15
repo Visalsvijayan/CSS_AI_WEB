@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Flexbox Practical</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="p-10 space-y-14 bg-gray-100">
+
+    <!-- ====================================== -->
+    <!-- 1. Flex Direction -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            1. Flex Direction
+        </h2>
+
+        <h3 class="font-semibold mb-2">flex-row</h3>
+
+        <div class="flex flex-row gap-3 mb-6">
+
+            <div class="bg-blue-500 text-white p-4">1</div>
+            <div class="bg-green-500 text-white p-4">2</div>
+            <div class="bg-red-500 text-white p-4">3</div>
+
+        </div>
+
+        <h3 class="font-semibold mb-2">flex-col</h3>
+
+        <div class="flex flex-col gap-3">
+
+            <div class="bg-blue-500 text-white p-4">1</div>
+            <div class="bg-green-500 text-white p-4">2</div>
+            <div class="bg-red-500 text-white p-4">3</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 2. Flex Wrap -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            2. Flex Wrap
+        </h2>
+
+        <h3 class="font-semibold mb-2">flex-wrap</h3>
+
+        <div class="flex flex-wrap gap-3 border p-3">
+
+            <div class="bg-blue-500 text-white p-4 w-40">Item 1</div>
+            <div class="bg-green-500 text-white p-4 w-40">Item 2</div>
+            <div class="bg-red-500 text-white p-4 w-40">Item 3</div>
+            <div class="bg-purple-500 text-white p-4 w-40">Item 4</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 3. Justify Content -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            3. Justify Content
+        </h2>
+
+        <div class="flex justify-between bg-gray-300 p-4">
+
+            <div class="bg-blue-500 text-white p-3">A</div>
+            <div class="bg-green-500 text-white p-3">B</div>
+            <div class="bg-red-500 text-white p-3">C</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 4. Align Items -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            4. Align Items
+        </h2>
+
+        <div class="flex items-center h-40 bg-gray-300 gap-4">
+
+            <div class="bg-blue-500 text-white p-4">
+                Small
+            </div>
+
+            <div class="bg-green-500 text-white p-8">
+                Large
+            </div>
+
+            <div class="bg-red-500 text-white p-5">
+                Medium
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 5. Flex Grow -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            5. Flex Grow
+        </h2>
+
+        <div class="flex gap-3">
+
+            <div class="bg-blue-500 text-white p-4">
+                Fixed
+            </div>
+
+            <div class="flex-1 bg-green-500 text-white p-4">
+                flex-1 (Expands)
+            </div>
+
+            <div class="bg-red-500 text-white p-4">
+                Fixed
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 6. Grow & Grow-0 -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            6. grow & grow-0
+        </h2>
+
+        <div class="flex gap-3">
+
+            <div class="grow bg-blue-500 text-white p-4">
+                grow
+            </div>
+
+            <div class="grow-0 bg-red-500 text-white p-4">
+                grow-0
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 7. Gap -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            7. Gap
+        </h2>
+
+        <div class="flex gap-8">
+
+            <div class="bg-blue-500 text-white p-4">1</div>
+            <div class="bg-green-500 text-white p-4">2</div>
+            <div class="bg-red-500 text-white p-4">3</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 8. Combined Example -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            8. Responsive Product Card
+        </h2>
+
+        <div class="flex justify-between items-center border rounded-lg p-5 bg-white">
+
+            <div>
+
+                <h3 class="text-xl font-bold">
+                    Wireless Headphones
+                </h3>
+
+                <p class="text-gray-600">
+                    ₹2,999
+                </p>
+
+            </div>
+
+            <button class="bg-blue-600 text-white px-5 py-2 rounded">
+                Buy Now
+            </button>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

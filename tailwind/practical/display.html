@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Display & Visibility Practical</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="p-10 space-y-14 bg-gray-100">
+
+    <!-- ====================================== -->
+    <!-- 1. display: block -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            1. Block
+        </h2>
+
+        <span class="block bg-blue-500 text-white p-3 mb-2">
+            First Block Element
+        </span>
+
+        <span class="block bg-green-500 text-white p-3">
+            Second Block Element
+        </span>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 2. display: inline -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            2. Inline
+        </h2>
+
+        <span class="inline bg-blue-500 text-white p-2">
+            HTML
+        </span>
+
+        <span class="inline bg-green-500 text-white p-2">
+            CSS
+        </span>
+
+        <span class="inline bg-red-500 text-white p-2">
+            Tailwind
+        </span>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 3. display: inline-block -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            3. Inline Block
+        </h2>
+
+        <div class="inline-block w-32 bg-purple-500 text-white p-4 mr-3">
+            Box 1
+        </div>
+
+        <div class="inline-block w-32 bg-pink-500 text-white p-4">
+            Box 2
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 4. Flex -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            4. Flex
+        </h2>
+
+        <div class="flex gap-4">
+
+            <div class="bg-blue-500 text-white p-5">
+                Item 1
+            </div>
+
+            <div class="bg-green-500 text-white p-5">
+                Item 2
+            </div>
+
+            <div class="bg-red-500 text-white p-5">
+                Item 3
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 5. Inline Flex -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            5. Inline Flex
+        </h2>
+
+        <div class="inline-flex gap-3 bg-yellow-300 p-4 rounded">
+
+            <span class="bg-white px-4 py-2 rounded">
+                Home
+            </span>
+
+            <span class="bg-white px-4 py-2 rounded">
+                About
+            </span>
+
+            <span class="bg-white px-4 py-2 rounded">
+                Contact
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 6. Grid -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            6. Grid
+        </h2>
+
+        <div class="grid grid-cols-3 gap-4">
+
+            <div class="bg-blue-500 text-white p-5 text-center">
+                1
+            </div>
+
+            <div class="bg-green-500 text-white p-5 text-center">
+                2
+            </div>
+
+            <div class="bg-red-500 text-white p-5 text-center">
+                3
+            </div>
+
+            <div class="bg-purple-500 text-white p-5 text-center">
+                4
+            </div>
+
+            <div class="bg-pink-500 text-white p-5 text-center">
+                5
+            </div>
+
+            <div class="bg-orange-500 text-white p-5 text-center">
+                6
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 7. Hidden -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            7. Hidden
+        </h2>
+
+        <div class="bg-blue-500 text-white p-4 mb-3">
+            This Box is Visible
+        </div>
+
+        <div class="hidden bg-red-500 text-white p-4">
+            You cannot see this because of "hidden".
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 8. Combined Example -->
+    <!-- ====================================== -->
+
+    <section>
+
+        <h2 class="text-3xl font-bold mb-5">
+            8. Navigation Bar Example
+        </h2>
+
+        <nav class="flex justify-between items-center bg-blue-600 text-white p-4 rounded">
+
+            <h3 class="text-xl font-bold">
+                My Website
+            </h3>
+
+            <div class="flex gap-4">
+
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+        </nav>
+
+    </section>
+
+</body>
+</html>

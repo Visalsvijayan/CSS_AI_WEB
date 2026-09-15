@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Typography Practical</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="p-10 space-y-14">
+
+    <!-- ====================================== -->
+    <!-- 1. Font Size -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            1. Font Size
+        </h2>
+
+        <p class="text-xs">text-xs</p>
+        <p class="text-sm">text-sm</p>
+        <p class="text-base">text-base</p>
+        <p class="text-lg">text-lg</p>
+        <p class="text-xl">text-xl</p>
+        <p class="text-2xl">text-2xl</p>
+        <p class="text-3xl">text-3xl</p>
+        <p class="text-4xl">text-4xl</p>
+        <p class="text-5xl">text-5xl</p>
+        <p class="text-6xl">text-6xl</p>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 2. Font Weight -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            2. Font Weight
+        </h2>
+
+        <p class="font-thin">font-thin (100)</p>
+        <p class="font-light">font-light (300)</p>
+        <p class="font-normal">font-normal (400)</p>
+        <p class="font-medium">font-medium (500)</p>
+        <p class="font-semibold">font-semibold (600)</p>
+        <p class="font-bold">font-bold (700)</p>
+        <p class="font-extrabold">font-extrabold (800)</p>
+        <p class="font-black">font-black (900)</p>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 3. Font Family -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            3. Font Family
+        </h2>
+
+        <p class="font-sans">
+            This text uses font-sans.
+        </p>
+
+        <p class="font-serif">
+            This text uses font-serif.
+        </p>
+
+        <p class="font-mono">
+            This text uses font-mono.
+        </p>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 4. Text Alignment -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            4. Text Alignment
+        </h2>
+
+        <p class="text-left border p-2">
+            This text is aligned to the left.
+        </p>
+
+        <p class="text-center border p-2">
+            This text is centered.
+        </p>
+
+        <p class="text-right border p-2">
+            This text is aligned to the right.
+        </p>
+
+        <p class="text-justify border p-2">
+            Tailwind CSS makes text alignment easy using utility classes.
+            This paragraph demonstrates justified text where both left and
+            right edges are aligned.
+        </p>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 5. Text Transformation -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            5. Text Transformation
+        </h2>
+
+        <p class="uppercase">
+            Tailwind CSS is Amazing
+        </p>
+
+        <p class="lowercase">
+            TAILWIND CSS IS AMAZING
+        </p>
+
+        <p class="capitalize">
+            welcome to tailwind css practical
+        </p>
+
+        <p class="normal-case">
+            Tailwind CSS Is Amazing
+        </p>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 6. Text Decoration -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            6. Text Decoration
+        </h2>
+
+        <p class="underline">
+            Underlined Text
+        </p>
+
+        <p class="line-through">
+            Line Through Text
+        </p>
+
+        <p class="overline">
+            No Underline
+        </p>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 7. Line Height -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            7. Line Height
+        </h2>
+
+        <p class="leading-tight border p-3 mb-4">
+            Tailwind CSS provides different utilities for controlling
+            line height. This paragraph uses leading-tight.
+        </p>
+
+        <p class="leading-normal border p-3 mb-4">
+            Tailwind CSS provides different utilities for controlling
+            line height. This paragraph uses leading-normal.
+        </p>
+
+        <p class="leading-loose border p-3">
+            Tailwind CSS provides different utilities for controlling
+            line height. This paragraph uses leading-loose.
+        </p>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 8. Letter Spacing -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            8. Letter Spacing
+        </h2>
+
+        <p class="tracking-tight">
+            tracking-tight
+        </p>
+
+        <p class="tracking-normal">
+            tracking-normal
+        </p>
+
+        <p class="tracking-wide">
+            tracking-wide
+        </p>
+
+        <p class="tracking-widest">
+            tracking-widest
+        </p>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 9. Combined Typography Example -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            9. Combined Typography Example
+        </h2>
+
+        <div class="border rounded-lg p-6">
+
+            <h1 class="text-4xl font-extrabold text-center uppercase tracking-wide">
+                Tailwind CSS
+            </h1>
+
+            <p class="text-lg font-light leading-loose text-justify mt-4">
+                Tailwind CSS is a utility-first CSS framework that enables
+                developers to build modern, responsive interfaces quickly.
+                Typography utilities allow complete control over font size,
+                weight, alignment, spacing, and text styling without writing
+                custom CSS.
+            </p>
+
+            <p class="text-center underline font-semibold mt-6">
+                Happy Learning!
+            </p>
+
+        </div>
+    </section>
+
+</body>
+</html>

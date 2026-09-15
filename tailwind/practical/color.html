@@ -1,0 +1,184 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Colors Practical</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="p-10 space-y-12">
+
+    <!-- ====================================== -->
+    <!-- 1. Text Colors -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            1. Text Colors
+        </h2>
+
+        <p class="text-blue-500 text-xl">Blue Text</p>
+        <p class="text-red-500 text-xl">Red Text</p>
+        <p class="text-green-500 text-xl">Green Text</p>
+        <p class="text-purple-500 text-xl">Purple Text</p>
+        <p class="text-orange-500 text-xl">Orange Text</p>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 2. Background Colors -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            2. Background Colors
+        </h2>
+
+        <div class="bg-blue-500 text-white p-4 rounded mb-3">
+            Blue Background
+        </div>
+
+        <div class="bg-green-500 text-white p-4 rounded mb-3">
+            Green Background
+        </div>
+
+        <div class="bg-red-500 text-white p-4 rounded mb-3">
+            Red Background
+        </div>
+
+        <div class="bg-purple-500 text-white p-4 rounded mb-3">
+            Purple Background
+        </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 3. Color Shades -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            3. Blue Color Shades
+        </h2>
+
+        <div class="bg-blue-100 p-3 mb-2">Blue 100</div>
+        <div class="bg-blue-300 p-3 mb-2">Blue 300</div>
+        <div class="bg-blue-500 text-white p-3 mb-2">Blue 500</div>
+        <div class="bg-blue-700 text-white p-3 mb-2">Blue 700</div>
+        <div class="bg-blue-900 text-white p-3">Blue 900</div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 4. Border Colors -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            4. Border Colors
+        </h2>
+
+        <div class="border-4 border-blue-500 p-4 rounded mb-3">
+            Blue Border
+        </div>
+
+        <div class="border-4 border-red-500 p-4 rounded mb-3">
+            Red Border
+        </div>
+
+        <div class="border-4 border-green-500 p-4 rounded mb-3">
+            Green Border
+        </div>
+
+        <div class="border-4 border-purple-500 p-4 rounded">
+            Purple Border
+        </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 5. Buttons -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            5. Colored Buttons
+        </h2>
+
+        <button class="bg-blue-600 text-white px-5 py-2 rounded">
+            Primary
+        </button>
+
+        <button class="bg-green-600 text-white px-5 py-2 rounded">
+            Success
+        </button>
+
+        <button class="bg-red-600 text-white px-5 py-2 rounded">
+            Danger
+        </button>
+
+        <button class="bg-yellow-500 px-5 py-2 rounded">
+            Warning
+        </button>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 6. Gradient Background -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            6. Gradient Background
+        </h2>
+
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-5 rounded mb-3">
+            Blue → Purple
+        </div>
+
+        <div class="bg-gradient-to-r from-green-500 to-blue-500 text-white p-5 rounded mb-3">
+            Green → Blue
+        </div>
+
+        <div class="bg-gradient-to-r from-pink-500 to-orange-500 text-white p-5 rounded">
+            Pink → Orange
+        </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 7. Combined Example -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            7. Combined Example
+        </h2>
+
+        <div class="border-2 border-purple-500 rounded-lg overflow-hidden w-80">
+
+            <div class="bg-blue-600 text-white p-4">
+                <h3 class="text-xl font-bold">
+                    Tailwind CSS
+                </h3>
+            </div>
+
+            <div class="p-5">
+
+                <p class="text-gray-600 mb-4">
+                    Learn Tailwind CSS by practicing utility classes.
+                </p>
+
+                <button class="bg-green-600 text-white px-4 py-2 rounded">
+                    Get Started
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

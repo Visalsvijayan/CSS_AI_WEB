@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Backgrounds Practical</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="p-10 space-y-14 bg-gray-100">
+
+    <!-- ====================================== -->
+    <!-- 1. Solid Background Colors -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            1. Solid Background Colors
+        </h2>
+
+        <div class="bg-blue-500 text-white p-4 rounded mb-3">
+            Blue Background
+        </div>
+
+        <div class="bg-green-500 text-white p-4 rounded mb-3">
+            Green Background
+        </div>
+
+        <div class="bg-red-500 text-white p-4 rounded mb-3">
+            Red Background
+        </div>
+
+        <div class="bg-yellow-400 p-4 rounded mb-3">
+            Yellow Background
+        </div>
+
+        <div class="bg-purple-500 text-white p-4 rounded">
+            Purple Background
+        </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 2. Background Color Shades -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            2. Background Color Shades
+        </h2>
+
+        <div class="bg-blue-100 p-3 mb-2">Blue 100</div>
+        <div class="bg-blue-300 p-3 mb-2">Blue 300</div>
+        <div class="bg-blue-500 text-white p-3 mb-2">Blue 500</div>
+        <div class="bg-blue-700 text-white p-3 mb-2">Blue 700</div>
+        <div class="bg-blue-900 text-white p-3">Blue 900</div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 3. Two Color Gradient -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            3. Gradient (from → to)
+        </h2>
+
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded mb-3">
+            Blue → Purple Gradient
+        </div>
+
+        <div class="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded">
+            Green → Blue Gradient
+        </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 4. Three Color Gradient -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            4. Gradient (from → via → to)
+        </h2>
+
+        <div class="bg-gradient-to-r from-pink-500 via-yellow-400 to-orange-500 text-white p-6 rounded mb-3">
+            Pink → Yellow → Orange
+        </div>
+
+        <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white p-6 rounded">
+            Indigo → Purple → Pink
+        </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 5. Gradient Directions -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            5. Gradient Directions
+        </h2>
+
+        <div class="bg-gradient-to-r from-blue-500 to-green-500 text-white p-5 rounded mb-3">
+            Left → Right (bg-gradient-to-r)
+        </div>
+
+        <div class="bg-gradient-to-l from-blue-500 to-green-500 text-white p-5 rounded mb-3">
+            Right → Left (bg-gradient-to-l)
+        </div>
+
+        <div class="bg-gradient-to-b from-blue-500 to-green-500 text-white p-5 rounded">
+            Top → Bottom (bg-gradient-to-b)
+        </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 6. Background Cover -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            6. bg-cover
+        </h2>
+
+        <div class="h-64 rounded text-white flex items-center justify-center text-3xl font-bold bg-cover"
+             style="background-image:url('https://picsum.photos/800/400');">
+            Background Cover
+        </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 7. Background Center -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            7. bg-center
+        </h2>
+
+        <div class="h-64 rounded text-white flex items-center justify-center text-3xl font-bold bg-cover bg-center"
+             style="background-image:url('https://picsum.photos/1000/600');">
+            Background Center
+        </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- 8. Combined Background Example -->
+    <!-- ====================================== -->
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">
+            8. Hero Banner Example
+        </h2>
+
+        <div class="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white p-10 rounded-lg">
+
+            <h1 class="text-5xl font-bold mb-4">
+                Welcome to Tailwind CSS
+            </h1>
+
+            <p class="text-lg mb-6">
+                Create beautiful websites using powerful background utilities.
+            </p>
+
+            <button class="bg-white text-blue-600 px-6 py-3 rounded font-semibold">
+                Get Started
+            </button>
+
+        </div>
+    </section>
+
+</body>
+</html>

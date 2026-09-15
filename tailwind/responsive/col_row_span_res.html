@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Responsive Grid Span Example</title>
+</head>
+<body class="bg-gray-100 p-6">
+
+    <div class="grid
+                grid-cols-1
+                sm:grid-cols-2
+                md:grid-cols-4
+             
+                gap-4"
+    >
+
+        <!-- Featured Card -->
+        <div class="bg-blue-600 text-white p-6 rounded-lg
+                    md:col-span-2
+                    md:row-span-2">
+           
+            <p>Spans 2 Columns & 2 Rows on Desktop</p>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-green-500 text-white p-6 rounded-lg">
+            Card 2
+        </div>
+
+        <!-- Card -->
+        <div class="bg-red-500 text-white p-6 rounded-lg">
+            Card 3
+        </div>
+
+        <!-- Wide Card -->
+        <div class="bg-yellow-500 text-black p-6 rounded-lg
+                    md:col-span-2">
+            Wide Card (2 Columns)
+        </div>
+
+        <!-- Card -->
+        <div class="bg-purple-500 text-white p-6 rounded-lg">
+            Card 5
+        </div>
+
+        <!-- Card -->
+        <div class="bg-pink-500 text-white p-6 rounded-lg">
+            Card 6
+        </div>
+
+    </div>
+
+</body>
+</html>
