@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papergrid - Desktop Clone</title>
+    <style>
+        /* =========================================
+           RESET & BASE STYLES
+        ========================================= */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================================
+           TOP PROMO BAR
+        ========================================= */
+        .promo-bar {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* =========================================
+           HEADER / NAVIGATION
+        ========================================= */
+        .header {
+            background-color: #1a1a1a;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #ccc;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-icon {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            fill: #fff;
+        }
+
+        /* Hamburger for mobile */
+        .mobile-menu-btn {
+            display: none;
+            width: 24px;
+            height: 24px;
+            fill: #fff;
+            cursor: pointer;
+        }
+
+        /* =========================================
+           PRODUCT GRID SECTION
+        ========================================= */
+        .product-section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto 60px;
+            padding: 0 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 Columns for Desktop */
+            gap: 15px;
+        }
+
+        .grid-item {
+            aspect-ratio: 1 / 1.1;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Standard Top 6 Grid Items */
+        .grid-item-standard {
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Bottom Row Grid Items (Split color/white) */
+        .grid-item-split {
+            background-color: #fff !important;
+            border: 1px solid #eee;
+        }
+        
+        .split-top {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .split-bottom {
+            background-color: #fff;
+            padding: 15px 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Mockup for the notebook graphics */
+        .notebook-mock {
+            width: 45%;
+            height: 50%;
+            background-color: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-left: 4px solid rgba(0,0,0,0.15); /* Book spine effect */
+            margin-bottom: 20px;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .grid-item h3 {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .grid-item p {
+            font-size: 0.8rem;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+
+        /* Specific Brand Colors */
+        .bg-yellow { background-color: #fdbb11; }
+        .bg-orange { background-color: #f26522; }
+        .bg-red { background-color: #ed1c24; }
+        .bg-pink { background-color: #d11275; }
+        .bg-lime { background-color: #7cc242; }
+        .bg-green { background-color: #00a651; }
+        .bg-blue { background-color: #0071bc; }
+        .bg-brown { background-color: #d78a56; }
+        
+        /* Special Spiral button */
+        .spiral-label {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 12px 10px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin: 0 20px 20px;
+            font-weight: 600;
+        }
+
+        /* =========================================
+           FOUNDERS SECTION (Desktop 2-Col Layout)
+        ========================================= */
+        .founders-section {
+            max-width: 1000px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        /* Simulated image placeholder for founders */
+        .founders-image {
+            flex: 1;
+            aspect-ratio: 3/4;
+            background-color: #ddd;
+            background-image: repeating-linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), repeating-linear-gradient(45deg, #ccc 25%, #ddd 25%, #ddd 75%, #ccc 75%, #ccc);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .founders-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .founders-text h2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        .founders-text h3 {
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .founders-text p {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .btn-about {
+            background-color: #161616;
+            color: #fff;
+            border: none;
+            padding: 14px 40px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn-about:hover {
+            background-color: #333;
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+        .footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px 30px;
+        }
+
+        .footer h4 {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #555;
+            padding-bottom: 2px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .social-icon {
+            display: inline-block;
+            margin: 20px 0;
+            width: 22px;
+            height: 22px;
+            fill: #aaa;
+            transition: fill 0.2s;
+        }
+
+        .social-icon:hover {
+            fill: #fff;
+        }
+
+        .footer-copyright {
+            margin-top: 40px;
+            font-size: 0.75rem;
+            color: #777;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-copyright a {
+            color: #777;
+        }
+        .footer-copyright a:hover {
+            color: #aaa;
+        }
+
+        /* =========================================
+           MEDIA QUERIES (RESPONSIVENESS)
+        ========================================= */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none; /* Hide standard nav on smaller screens */
+            }
+            .mobile-menu-btn {
+                display: block; /* Show hamburger */
+            }
+            .header-left {
+                gap: 15px;
+            }
+            .founders-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .founders-text {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet/mobile */
+            }
+            .founders-image {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* 1 column on extra small mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Promo Bar -->
+    <div class="promo-bar">
+        Free shipping on all orders &rarr;
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="header-left">
+            <!-- Mobile Hamburger (Hidden on Desktop) -->
+            <svg class="mobile-menu-btn" viewBox="0 0 24 24">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+            
+            <a href="#" class="logo">papergrid</a>
+            
+            <!-- Desktop Nav -->
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Catalogue</a>
+                <a href="#">Track</a>
+            </nav>
+        </div>
+
+        <!-- Right Icons -->
+        <div class="header-icons">
+            <!-- User Profile SVG -->
+            <svg class="header-icon" viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+            <!-- Cart SVG -->
+            <svg class="header-icon" viewBox="0 0 24 24">
+                <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Product Grid (3 Column Desktop) -->
+        <section class="product-section">
+            <div class="grid-container">
+                <!-- Row 1 -->
+                <div class="grid-item grid-item-standard bg-yellow">
+                    <div class="notebook-mock"></div>
+                    <h3>Short Book</h3>
+                    <p>19 x 15.5 cm</p>
+                </div>
+                <div class="grid-item grid-item-standard bg-orange">
+                    <div class="notebook-mock"></div>
+                    <h3>King Size</h3>
+                    <p>24 x 18 cm</p>
+                </div>
+                <div class="grid-item grid-item-standard bg-red">
+                    <div class="notebook-mock"></div>
+                    <h3>Cut Size</h3>
+                    <p>27.2 x 16.7 cm</p>
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="grid-item grid-item-standard bg-pink">
+                    <div class="notebook-mock"></div>
+                    <h3>A4 Notebook</h3>
+                    <p>29.7 x 21 cm</p>
+                </div>
+                <div class="grid-item grid-item-standard bg-lime">
+                    <div class="notebook-mock"></div>
+                    <h3>Long Book</h3>
+                    <p>31 x 19 cm</p>
+                </div>
+                <div class="grid-item grid-item-standard bg-green">
+                    <div class="notebook-mock"></div>
+                    <h3>Ultra Long</h3>
+                    <p>33 x 21 cm</p>
+                </div>
+                
+                <!-- Row 3 (Split Layouts) -->
+                <div class="grid-item grid-item-split">
+                    <div class="split-top bg-blue">
+                        <div class="notebook-mock" style="width:50%; height:40%;"></div>
+                    </div>
+                    <div class="split-bottom" style="color: #0071bc;">
+                        Drawing, Graph & Practical
+                    </div>
+                </div>
+                
+                <div class="grid-item grid-item-split">
+                    <div class="split-top bg-brown">
+                        <div class="notebook-mock" style="width:50%; height:40%;"></div>
+                    </div>
+                    <div class="split-bottom" style="color: #d78a56;">
+                        Brown Cover Notebooks
+                    </div>
+                </div>
+                
+                <div class="grid-item grid-item-split">
+                    <div class="split-top" style="background-color: #fff;">
+                        <!-- Custom mock for spiral notebooks -->
+                        <div style="display:flex; gap:10px; align-items:center;">
+                           <div class="notebook-mock" style="width: 40px; height: 60px; background:#7cc242; border-left: 4px dotted #333;"></div>
+                           <div class="notebook-mock" style="width: 50px; height: 75px; background:#111; border-left: 5px dotted #999;"></div>
+                        </div>
+                    </div>
+                    <!-- Black button label -->
+                    <div class="spiral-label">
+                        Spiral & Wiro Notebooks
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founders Section (Flex 2-Col Layout) -->
+        <section class="founders-section">
+            <!-- Simulated image placeholder for founders photo -->
+            <div class="founders-image">
+                [ B&W Founders Photo ]
+            </div>
+            
+            <div class="founders-text">
+                <h2>A Note From Our Founders</h2>
+                <h3>Built on Vision. Strengthened by Distribution.</h3>
+                
+                <p>Papergrid was founded by <strong>Rohit Sethi</strong> and <strong>Sanjay Pratap Singh</strong> with a clear purpose: to create notebooks that combine thoughtful design, dependable quality and strong market availability.</p>
+                
+                <button class="btn-about">About Us</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h4>Contact Us</h4>
+        <ul class="footer-links">
+            <li><a href="tel:+919830933254">+91-9830933254</a></li>
+            <li><a href="tel:+918041644555">+91-8041644555</a></li>
+            <li><br><a href="mailto:ecommerce@papergrid.in">ecommerce@papergrid.in</a></li>
+        </ul>
+
+        <!-- Instagram Icon SVG -->
+        <a href="#" aria-label="Instagram">
+            <svg class="social-icon" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+        </a>
+
+        <div class="footer-copyright">
+            <span>&copy; 2026 Papergrid Industries Powered by Shopify</span>
+            <a href="#">Refund policy</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms of service</a>
+            <a href="#">Shipping policy</a>
+            <a href="#">Contact information</a>
+        </div>
+    </footer>
+
+</body>
+</html>
